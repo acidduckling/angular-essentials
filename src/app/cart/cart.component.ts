@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-cart',
   template: `
   <input [(ngModel)]="newItem" type="text">
-  <button type="button" (click)="addNewItem()">Add Item</button>
+  <button type="button" class="btn btn-primary" (click)="addNewItem()">Add Item</button>
   `,
   styles: []
 })
