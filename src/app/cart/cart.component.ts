@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   <button type="button" class="btn"
     [ngClass]="{'btn-primary': newItem != '', 'btn-default': newItem === ''}"
     (click)="addNewItem()">Add Item</button>
-
+  <p *ngIf="newItem === ''">please enter a value!</p>
   <!-- Iterating over items -->
   <ul class="list-group">
     <li
