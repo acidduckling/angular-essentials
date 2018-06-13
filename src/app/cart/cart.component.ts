@@ -10,7 +10,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
   <!-- Iterating over items -->
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let item of items">{{ item }}</li>
+    <li
+      class="list-group-item"
+      *ngFor="let item of items; let i = index"
+      [ngStyle]="{ backgroundColor: i % 2 === 0 ? 'yellow' : 'blue' }">{{ item }}</li>
   </ul>
   `,
   styles: []
