@@ -1,5 +1,17 @@
 import { Component } from '@angular/core';
 
+// If we do not have the types, just import like this:
+// import 'lodash';
+
+// If we do not have a type definition file we can use a declare statement:
+// declare var _: any;
+
+// If types are available (eg. @types/lodash in this example) use the following:
+import { random } from 'lodash';
+
+
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +23,8 @@ export class AppComponent {
 
   rootItems = ['Apples', 'Bannannas', 'Cherries'];
 
+  num: number;
+
   onNameChanged(newName) {
     this.rootName = newName;
   }
@@ -18,5 +32,9 @@ export class AppComponent {
   addNewItem(item) {
     this.rootItems.push(item);
     console.log(this.rootItems);
+  }
+
+  randNumber() {
+    this.num = random(1, 10);
   }
 }
